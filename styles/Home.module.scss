@@ -1,0 +1,36 @@
+@use "./scss/index" as *;
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+
+
+.datePicker {
+ @include flex(center, space-between);
+ position: relative;
+ width: 262px;
+ padding: 9px 15px;
+  border: 1px solid $main-black;
+  border-radius: 10px;
+  &__wrapper{
+
+input{
+ border: none; 
+ @include  textFont(14px,$main-black);
+ outline: none;
+}
+label{
+  display: block;
+  @include  textFont(12px, $main-gray);
+}
+  }
+  img{
+    cursor: pointer;
+  }
+}
