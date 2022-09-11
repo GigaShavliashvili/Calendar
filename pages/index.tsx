@@ -4,7 +4,10 @@ import Image from "next/image"
 import styles from '../styles/Home.module.scss'
 import Calendar from "../Components/Calendar"
 var date = new Date();
+
 const Home: NextPage = () => {
+  
+  
 const [isDrop, setIsDrop] = useState<boolean>(false)
 const [currentMonth, setCurrentMonth ] = useState(date.getMonth() + 1)
 const [years, setYears ] = useState(date.getFullYear())
