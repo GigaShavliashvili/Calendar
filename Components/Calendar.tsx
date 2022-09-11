@@ -23,13 +23,13 @@ const Calendar = ({
   years,
   currentMonth,
 }: dataPickers) => {
-  /* const [dayNumber, setDayNumber] = useState<any>(new Date(currentYears,currentMonth, 1 )) */
+ 
   const currDate = new Date(years, currentMonth , 1);
   console.log(currDate.getDay());
   const dayNumber = currDate.getDay();
   const monthSize = leapYear(years);
 
-  /*   const array = new Array(monthSize[currentMonth]).fill("day"); */
+// array for evry month length
   let array: number[] = new Array(dayNumber).fill(null);
   for (let i = 0; i < monthSize[currentMonth - 1]; i++) {
     array.push(i);
